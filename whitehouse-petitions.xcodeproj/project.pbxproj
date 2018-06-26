@@ -14,6 +14,8 @@
 		9EE2747D20E1C1CA00CA653B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE2747C20E1C1CA00CA653B /* Assets.xcassets */; };
 		9EE2748020E1C1CA00CA653B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE2747E20E1C1CA00CA653B /* LaunchScreen.storyboard */; };
 		9EE2748B20E1C1CB00CA653B /* whitehouse_petitionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE2748A20E1C1CB00CA653B /* whitehouse_petitionsTests.swift */; };
+		9EEB423520E2D8CC00CD6B56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB423320E2D8CC00CD6B56 /* DetailViewController.swift */; };
+		9EEB423620E2D8CC00CD6B56 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EEB423420E2D8CC00CD6B56 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		9EE2748620E1C1CB00CA653B /* whitehouse-petitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "whitehouse-petitionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE2748A20E1C1CB00CA653B /* whitehouse_petitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whitehouse_petitionsTests.swift; sourceTree = "<group>"; };
 		9EE2748C20E1C1CB00CA653B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EEB423320E2D8CC00CD6B56 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9EEB423420E2D8CC00CD6B56 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		A62551B0DE7F2543E6714E25 /* Pods-whitehouse-petitions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whitehouse-petitions.release.xcconfig"; path = "Pods/Target Support Files/Pods-whitehouse-petitions/Pods-whitehouse-petitions.release.xcconfig"; sourceTree = "<group>"; };
 		BEA01FE8CA77564968CE6C98 /* Pods_whitehouse_petitions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whitehouse_petitions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +90,8 @@
 			children = (
 				9EE2747520E1C1C900CA653B /* AppDelegate.swift */,
 				9EE2747720E1C1C900CA653B /* ViewController.swift */,
+				9EEB423320E2D8CC00CD6B56 /* DetailViewController.swift */,
+				9EEB423420E2D8CC00CD6B56 /* DetailViewController.xib */,
 				9EE2747920E1C1C900CA653B /* Main.storyboard */,
 				9EE2747C20E1C1CA00CA653B /* Assets.xcassets */,
 				9EE2747E20E1C1CA00CA653B /* LaunchScreen.storyboard */,
@@ -206,6 +212,7 @@
 				9EE2748020E1C1CA00CA653B /* LaunchScreen.storyboard in Resources */,
 				9EE2747D20E1C1CA00CA653B /* Assets.xcassets in Resources */,
 				9EE2747B20E1C1C900CA653B /* Main.storyboard in Resources */,
+				9EEB423620E2D8CC00CD6B56 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEB423520E2D8CC00CD6B56 /* DetailViewController.swift in Sources */,
 				9EE2747820E1C1C900CA653B /* ViewController.swift in Sources */,
 				9EE2747620E1C1C900CA653B /* AppDelegate.swift in Sources */,
 			);
