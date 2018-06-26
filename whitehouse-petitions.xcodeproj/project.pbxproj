@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7D25FE04AF0507DA86A3A0 /* Pods_whitehouse_petitions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA01FE8CA77564968CE6C98 /* Pods_whitehouse_petitions.framework */; };
 		9EE2747620E1C1C900CA653B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE2747520E1C1C900CA653B /* AppDelegate.swift */; };
 		9EE2747820E1C1C900CA653B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE2747720E1C1C900CA653B /* ViewController.swift */; };
 		9EE2747B20E1C1C900CA653B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE2747920E1C1C900CA653B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03B7DCC725285CD7AF281232 /* Pods-whitehouse-petitions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whitehouse-petitions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whitehouse-petitions/Pods-whitehouse-petitions.debug.xcconfig"; sourceTree = "<group>"; };
 		9EE2747220E1C1C900CA653B /* whitehouse-petitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whitehouse-petitions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE2747520E1C1C900CA653B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EE2747720E1C1C900CA653B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		9EE2748620E1C1CB00CA653B /* whitehouse-petitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "whitehouse-petitionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE2748A20E1C1CB00CA653B /* whitehouse_petitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whitehouse_petitionsTests.swift; sourceTree = "<group>"; };
 		9EE2748C20E1C1CB00CA653B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62551B0DE7F2543E6714E25 /* Pods-whitehouse-petitions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whitehouse-petitions.release.xcconfig"; path = "Pods/Target Support Files/Pods-whitehouse-petitions/Pods-whitehouse-petitions.release.xcconfig"; sourceTree = "<group>"; };
+		BEA01FE8CA77564968CE6C98 /* Pods_whitehouse_petitions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whitehouse_petitions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7D25FE04AF0507DA86A3A0 /* Pods_whitehouse_petitions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				9EE2747420E1C1C900CA653B /* whitehouse-petitions */,
 				9EE2748920E1C1CB00CA653B /* whitehouse-petitionsTests */,
 				9EE2747320E1C1C900CA653B /* Products */,
+				EEDD15ABC27DABC1AC882627 /* Pods */,
+				B27363ED7C7AC524AF82E950 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +103,23 @@
 			path = "whitehouse-petitionsTests";
 			sourceTree = "<group>";
 		};
+		B27363ED7C7AC524AF82E950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEA01FE8CA77564968CE6C98 /* Pods_whitehouse_petitions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEDD15ABC27DABC1AC882627 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03B7DCC725285CD7AF281232 /* Pods-whitehouse-petitions.debug.xcconfig */,
+				A62551B0DE7F2543E6714E25 /* Pods-whitehouse-petitions.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EE2748F20E1C1CB00CA653B /* Build configuration list for PBXNativeTarget "whitehouse-petitions" */;
 			buildPhases = (
+				41D74AE29A6EC14EE589A9A7 /* [CP] Check Pods Manifest.lock */,
 				9EE2746E20E1C1C900CA653B /* Sources */,
 				9EE2746F20E1C1C900CA653B /* Frameworks */,
 				9EE2747020E1C1C900CA653B /* Resources */,
+				967A2AAA5A6FB73DBB51C880 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +217,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41D74AE29A6EC14EE589A9A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-whitehouse-petitions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		967A2AAA5A6FB73DBB51C880 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-whitehouse-petitions/Pods-whitehouse-petitions-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whitehouse-petitions/Pods-whitehouse-petitions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9EE2746E20E1C1C900CA653B /* Sources */ = {
@@ -356,10 +421,12 @@
 		};
 		9EE2749020E1C1CB00CA653B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B7DCC725285CD7AF281232 /* Pods-whitehouse-petitions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ2HFB5LEW;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				INFOPLIST_FILE = "whitehouse-petitions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,10 +441,12 @@
 		};
 		9EE2749120E1C1CB00CA653B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A62551B0DE7F2543E6714E25 /* Pods-whitehouse-petitions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ2HFB5LEW;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				INFOPLIST_FILE = "whitehouse-petitions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
