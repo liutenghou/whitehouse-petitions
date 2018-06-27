@@ -18,20 +18,28 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-
-        if let url = URL(string: urlString){
-            if let data = try? String(contentsOf: url){ //try incase nothing returned
-                let json = JSON(parseJSON: data)
+        //TODO: add loading animation
+        var urlString:String = ""
+        if navigationController?.tabBarItem.tag == 0{
+            //recent
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+        }else if navigationController?.tabBarItem.tag == 1{
+            //popular
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
+        }
+        
+        if let url = URL(string: urlString), let data = try? String(contentsOf: url){
+            let json = JSON(parseJSON: data)
+            if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                //we're good to go
+                print(json["metadata"]["responseInfo"]["developerMessage"].stringValue)
                 
-                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                    //we're good to go
-                    print(json["metadata"]["responseInfo"]["developerMessage"].stringValue)
-                    
-                    parse(json: json)
-                }
+                parse(json: json)
+                return
             }
         }
+        
+        //error if reached
         
     }
     
@@ -46,6 +54,12 @@ class ViewController: UITableViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    func showError(){
+        let ac = UIAlertController(title: "Loading error", message: "Problem loading feed", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(ac, animated: true)
     }
     
     //MARK:Tableview methods
