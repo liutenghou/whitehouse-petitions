@@ -18,6 +18,10 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
+    }
+    
+    @objc func fetchJSON(){
         //TODO: add loading animation
         var urlString:String = ""
         if navigationController?.tabBarItem.tag == 0{
@@ -34,13 +38,13 @@ class ViewController: UITableViewController {
                 //we're good to go
                 print(json["metadata"]["responseInfo"]["developerMessage"].stringValue)
                 
-                parse(json: json)
+                self.parse(json: json)
                 return
             }
         }
         
         //error if reached
-        
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
     }
     
     func parse(json: JSON){
@@ -52,14 +56,15 @@ class ViewController: UITableViewController {
             
             petitions.append(petition)
         }
-        
-        tableView.reloadData()
+        DispatchQueue.main.async { [unowned self] in
+            self.tableView.reloadData()
+        }
     }
     
-    func showError(){
+    @objc func showError(){
         let ac = UIAlertController(title: "Loading error", message: "Problem loading feed", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(ac, animated: true)
+        self.present(ac, animated: true)
     }
     
     //MARK:Tableview methods
@@ -81,6 +86,5 @@ class ViewController: UITableViewController {
         vc.detailItem = petitions[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
-
 }
 
